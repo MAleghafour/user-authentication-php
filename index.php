@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
-</head>
-<body>
-    <h1 style="text-align: center;">User Profile</h1>
-</body>
-</html>
+<?php
+require 'bootstrap/init.php';
+
+if (!isLoggedIn()) {
+    redirect('auth.php?action=login');
+}
+
+$userData = getAuthenticateUserBySession($_COOKIE['auth']);
+
+if (isset($_GET['action']) && $_GET['action'] == 'logout') {
+    logout($userData->email);
+}
+
+include 'tpl/index-tpl.php';
