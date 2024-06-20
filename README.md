@@ -1,10 +1,6 @@
 # php-user-authentication
 
-<center>
-  <img src="auth.png" alt="PHP authentication" />
-</center>
-
-Build PHP 7 user authentication and login system with MySQL and Bootstrap 4 using procedural programming approach.
+Build PHP 7 user authentication and login system with MySQL and Bootstrap using procedural programming approach.
 
 
 ## User Registration & Login System Features
@@ -12,12 +8,12 @@ Build PHP 7 user authentication and login system with MySQL and Bootstrap 4 usin
 * Building user registration form with Bootstrap
 * PHP server-side validation
 * Handling error messages
-* Securely hash password
-* Sending verification mail with SwiftMailer
+* Sending verification mail with phpMailer
+* Sending verification sms with Kavehnegar
 
 ## Login System
 * Build login form with Bootstrap
-* Password verification
+* Login with mail or sms
 * Storing data in session
 * Allowing access to only verified users
 * Display user data to logged-in users
